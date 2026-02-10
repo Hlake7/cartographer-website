@@ -1,8 +1,11 @@
 import { NextResponse } from "next/server";
-import { stripe } from "@/lib/stripe";
+import { getStripe } from "@/lib/stripe";
+
+export const dynamic = "force-dynamic";
 
 export async function POST() {
   try {
+    const stripe = getStripe();
     const appUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
 
     const session = await stripe.checkout.sessions.create({
