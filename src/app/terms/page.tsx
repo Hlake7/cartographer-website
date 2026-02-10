@@ -43,10 +43,9 @@ export default function TermsPage() {
             </h2>
             <p className="mt-2">
               Subscriptions are billed monthly at the rate displayed at the time
-              of purchase. All new subscriptions include a 7-day free trial. You
-              may cancel your subscription at any time through your Stripe billing
-              portal. Cancellation takes effect at the end of your current billing
-              period.
+              of purchase. You may cancel your subscription at any time through
+              your Stripe billing portal. Cancellation takes effect at the end of
+              your current billing period.
             </p>
           </section>
 

@@ -25,7 +25,7 @@ export default function Hero() {
             {/* CTAs */}
             <div className="mt-8 flex flex-wrap gap-4">
               <Button href="#pricing" size="lg">
-                Get Started &mdash; $7/mo
+                Subscribe &mdash; $7/mo
               </Button>
               <Button href="#how-it-works" variant="outline" size="lg">
                 See How It Works
@@ -34,7 +34,7 @@ export default function Hero() {
 
             {/* Trust line */}
             <p className="mt-5 text-sm text-gray-500">
-              7-day free trial. Cancel anytime.
+              Cancel anytime. No long-term commitment.
             </p>
           </div>
 

@@ -16,7 +16,7 @@ export default function CancelPage() {
           <h1 className="font-serif text-4xl text-navy">Changed Your Mind?</h1>
           <p className="mt-4 text-lg text-gray-600">
             No worries — your checkout was cancelled and you haven&apos;t been
-            charged. You can start your free trial whenever you&apos;re ready.
+            charged. You can subscribe whenever you&apos;re ready.
           </p>
           <div className="mt-8 flex justify-center gap-4">
             <Button href="/#pricing" variant="primary">

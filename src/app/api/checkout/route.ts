@@ -17,9 +17,6 @@ export async function POST() {
           quantity: 1,
         },
       ],
-      subscription_data: {
-        trial_period_days: 7,
-      },
       success_url: `${appUrl}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${appUrl}/cancel`,
     });

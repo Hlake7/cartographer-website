@@ -28,7 +28,7 @@ export default function Pricing() {
                 <span className="text-gray-500">/month</span>
               </div>
               <p className="mt-2 text-sm text-emerald font-medium">
-                {PRICING.trialDays}-day free trial
+                Beta Access
               </p>
             </div>
 

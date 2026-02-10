@@ -6,7 +6,6 @@ export const PRICING = {
   name: "Cartographer",
   price: 7,
   interval: "month" as const,
-  trialDays: 7,
   features: [
     "All 29 Utah counties",
     "Parcel boundaries on aerial imagery",
@@ -136,9 +135,9 @@ export const FAQ_ITEMS: FAQItem[] = [
       "Absolutely. There are no contracts or commitments. You can cancel your subscription anytime from your Stripe billing portal, and you won't be charged again.",
   },
   {
-    question: "Is there a free trial?",
+    question: "How does billing work?",
     answer:
-      "Yes — every new subscription comes with a 7-day free trial. You won't be charged until the trial ends, and you can cancel anytime during the trial period.",
+      "You'll be charged $7 when you subscribe, and then monthly after that. You can cancel anytime — no contracts or commitments.",
   },
 ];
 
