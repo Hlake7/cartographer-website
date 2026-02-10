@@ -5,6 +5,19 @@ export const dynamic = "force-dynamic";
 
 export async function POST() {
   try {
+    if (!process.env.STRIPE_SECRET_KEY) {
+      return NextResponse.json(
+        { error: "STRIPE_SECRET_KEY is not configured" },
+        { status: 500 }
+      );
+    }
+    if (!process.env.STRIPE_PRICE_ID) {
+      return NextResponse.json(
+        { error: "STRIPE_PRICE_ID is not configured" },
+        { status: 500 }
+      );
+    }
+
     const stripe = getStripe();
     const appUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
 
@@ -13,7 +26,7 @@ export async function POST() {
       payment_method_types: ["card"],
       line_items: [
         {
-          price: process.env.STRIPE_PRICE_ID!,
+          price: process.env.STRIPE_PRICE_ID,
           quantity: 1,
         },
       ],
@@ -23,9 +36,10 @@ export async function POST() {
 
     return NextResponse.json({ url: session.url });
   } catch (err) {
+    const message = err instanceof Error ? err.message : "Unknown error";
     console.error("Checkout error:", err);
     return NextResponse.json(
-      { error: "Failed to create checkout session" },
+      { error: message },
       { status: 500 }
     );
   }

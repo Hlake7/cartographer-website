@@ -16,8 +16,9 @@ export default function CheckoutButton() {
       } else {
         throw new Error(data.error || "Failed to create checkout session");
       }
-    } catch {
-      alert("Something went wrong. Please try again.");
+    } catch (err) {
+      const message = err instanceof Error ? err.message : "Something went wrong.";
+      alert(message);
     } finally {
       setLoading(false);
     }
