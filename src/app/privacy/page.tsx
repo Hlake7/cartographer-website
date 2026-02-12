@@ -107,10 +107,10 @@ export default function PrivacyPage() {
               You may access, correct, or delete your personal information and
               withdraw consent depending on your jurisdiction. Contact us at{" "}
               <a
-                href="mailto:support@cartographer.dev"
+                href="mailto:team@cartographersmap.com"
                 className="text-blue hover:underline"
               >
-                support@cartographer.dev
+                team@cartographersmap.com
               </a>{" "}
               to exercise these rights.
             </p>
