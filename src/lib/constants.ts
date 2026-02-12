@@ -19,7 +19,7 @@ export const PRICING = {
 export const STATS = [
   { value: "1,670,000+", label: "Parcels" },
   { value: "29 of 29", label: "Counties" },
-  { value: "Daily", label: "Updates" },
+  { value: "Monthly", label: "Updates" },
   { value: "2-Minute", label: "Setup" },
 ];
 
