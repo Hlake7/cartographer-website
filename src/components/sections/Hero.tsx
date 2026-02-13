@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Button from "@/components/ui/Button";
 
 export default function Hero() {
@@ -38,24 +39,17 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* Right column — screenshot placeholder */}
+          {/* Right column — product screenshot */}
           <div className="relative">
             <div className="overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 shadow-2xl">
-              <div className="aspect-[4/3] flex items-center justify-center bg-gradient-to-br from-blue-light to-gray-100 p-8">
-                <div className="text-center">
-                  <div className="mx-auto mb-4 h-16 w-16 rounded-2xl bg-blue/10 flex items-center justify-center">
-                    <svg className="h-8 w-8 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" />
-                    </svg>
-                  </div>
-                  <p className="text-sm font-medium text-gray-500">
-                    Google Earth Pro with Parcel Overlays
-                  </p>
-                  <p className="mt-1 text-xs text-gray-400">
-                    Replace with your screenshot
-                  </p>
-                </div>
-              </div>
+              <Image
+                src="/product_pic.png"
+                alt="Google Earth Pro showing Utah parcel boundaries with ownership and property data overlays"
+                width={1200}
+                height={900}
+                className="h-auto w-full"
+                priority
+              />
             </div>
           </div>
         </div>
