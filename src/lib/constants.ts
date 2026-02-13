@@ -132,7 +132,16 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "Can I cancel anytime?",
     answer:
-      "Absolutely. There are no contracts or commitments. You can cancel your subscription anytime from your Stripe billing portal, and you won't be charged again.",
+      "Absolutely. There are no contracts or commitments. You can cancel your subscription anytime and you won't be charged again.",
+    answerHref: "/manage",
+    answerLinkText: "Manage your subscription.",
+  },
+  {
+    question: "How do I manage or cancel my subscription?",
+    answer:
+      "You can update your payment method or cancel your subscription anytime through the billing portal. Just enter the email address you used when subscribing.",
+    answerHref: "/manage",
+    answerLinkText: "Go to subscription management.",
   },
   {
     question: "How does billing work?",

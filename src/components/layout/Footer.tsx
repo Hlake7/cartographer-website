@@ -5,6 +5,7 @@ const footerLinks = {
     { label: "Features", href: "#features" },
     { label: "Pricing", href: "#pricing" },
     { label: "FAQ", href: "#faq" },
+    { label: "Manage Subscription", href: "/manage" },
   ],
   Legal: [
     { label: "Privacy Policy", href: "/privacy" },

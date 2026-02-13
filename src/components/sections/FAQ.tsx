@@ -20,6 +20,8 @@ export default function FAQ() {
               key={item.question}
               question={item.question}
               answer={item.answer}
+              answerHref={item.answerHref}
+              answerLinkText={item.answerLinkText}
             />
           ))}
         </div>

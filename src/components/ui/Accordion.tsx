@@ -6,9 +6,11 @@ import { ChevronDown } from "lucide-react";
 interface AccordionItemProps {
   question: string;
   answer: string;
+  answerHref?: string;
+  answerLinkText?: string;
 }
 
-export function AccordionItem({ question, answer }: AccordionItemProps) {
+export function AccordionItem({ question, answer, answerHref, answerLinkText }: AccordionItemProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -30,7 +32,17 @@ export function AccordionItem({ question, answer }: AccordionItemProps) {
         }`}
       >
         <div className="overflow-hidden">
-          <p className="text-gray-600 leading-relaxed">{answer}</p>
+          <p className="text-gray-600 leading-relaxed">
+            {answer}
+            {answerHref && answerLinkText && (
+              <>
+                {" "}
+                <a href={answerHref} className="text-blue font-medium hover:underline">
+                  {answerLinkText}
+                </a>
+              </>
+            )}
+          </p>
         </div>
       </div>
     </div>

@@ -19,6 +19,8 @@ export interface UseCase {
 export interface FAQItem {
   question: string;
   answer: string;
+  answerHref?: string;
+  answerLinkText?: string;
 }
 
 export interface PricingFeature {
