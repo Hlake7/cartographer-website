@@ -9,7 +9,7 @@ export const PRICING = {
   features: [
     "All 29 Utah counties",
     "Parcel boundaries on aerial imagery",
-    "Ownership & property data",
+    "Ownership & property data*",
     "Market values",
     "Automatic data updates",
     "New states as they launch",
@@ -52,7 +52,7 @@ export const FEATURES: Feature[] = [
   },
   {
     icon: "User",
-    title: "Ownership & Property Data",
+    title: "Ownership & Property Data*",
     description:
       "Click any parcel to view owner name, address, acreage, and market value.",
   },
@@ -73,6 +73,12 @@ export const FEATURES: Feature[] = [
     title: "More States Coming",
     description:
       "Utah is just the start. Get access to new states as they launch.",
+  },
+  {
+    icon: "Building",
+    title: "Zoning Data — Salt Lake County",
+    description:
+      "View zoning designations for parcels in Salt Lake County, with more counties coming soon.",
   },
 ];
 
