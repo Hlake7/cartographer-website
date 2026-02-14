@@ -43,7 +43,7 @@ export default function Hero() {
           <div className="relative">
             <div className="overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 shadow-2xl">
               <Image
-                src="/product_pic.png"
+                src="/Screenshot 2026-02-13 193705.png"
                 alt="Google Earth Pro showing Utah parcel boundaries with ownership and property data overlays"
                 width={1200}
                 height={900}
