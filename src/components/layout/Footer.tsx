@@ -49,7 +49,15 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 border-t border-gray-200 pt-6 text-center text-sm text-gray-400">
-          &copy; {new Date().getFullYear()} {SITE_NAME}. All rights reserved.
+          <p>
+            Questions or comments? Email us at{" "}
+            <a href="mailto:team@cartographersmap.com" className="text-gray-500 hover:text-navy transition-colors">
+              team@cartographersmap.com
+            </a>
+          </p>
+          <p className="mt-2">
+            &copy; {new Date().getFullYear()} {SITE_NAME}. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
