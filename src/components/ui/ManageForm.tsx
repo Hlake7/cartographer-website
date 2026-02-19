@@ -5,32 +5,12 @@ import { useState } from "react";
 export default function ManageForm() {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setError("");
+    if (!email) return;
     setLoading(true);
-
-    try {
-      const res = await fetch("/api/manage", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
-
-      const data = await res.json();
-
-      if (data.url) {
-        window.location.href = data.url;
-      } else {
-        setError(data.error || "Something went wrong. Please try again.");
-      }
-    } catch {
-      setError("Something went wrong. Please try again.");
-    } finally {
-      setLoading(false);
-    }
+    window.location.href = `https://cartographer.dev/billing/resend?email=${encodeURIComponent(email)}`;
   };
 
   return (
@@ -50,16 +30,12 @@ export default function ManageForm() {
         />
       </div>
 
-      {error && (
-        <p className="text-sm text-red-600">{error}</p>
-      )}
-
       <button
         type="submit"
         disabled={loading}
         className="w-full cursor-pointer rounded-lg bg-blue px-8 py-3.5 text-base font-semibold text-white shadow-sm transition-colors duration-200 hover:bg-blue/90 disabled:cursor-not-allowed disabled:opacity-60"
       >
-        {loading ? "Redirecting..." : "Manage Subscription"}
+        {loading ? "Sending..." : "Send Cancellation Link"}
       </button>
     </form>
   );
