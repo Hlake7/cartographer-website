@@ -10,7 +10,7 @@ export default function ManageForm() {
     e.preventDefault();
     if (!email) return;
     setLoading(true);
-    window.location.href = `https://cartographer.dev/billing/resend?email=${encodeURIComponent(email)}`;
+    window.location.href = `https://cartographer-b2c2haaxdqh3exge.westus2-01.azurewebsites.net/billing/resend?email=${encodeURIComponent(email)}`;
   };
 
   return (
