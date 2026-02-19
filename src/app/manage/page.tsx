@@ -21,8 +21,9 @@ export default function ManagePage() {
             Manage Your Subscription
           </h1>
           <p className="mt-4 text-lg text-gray-600">
-            Enter the email address you used when subscribing. We&apos;ll send
-            you a secure link to cancel your subscription.
+            Enter the email address you used when subscribing. We&apos;ll
+            resend your Google Earth link, which includes a button to manage or
+            cancel your subscription.
           </p>
 
           <div className="mt-8">

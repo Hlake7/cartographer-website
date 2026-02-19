@@ -35,7 +35,7 @@ export default function ManageForm() {
         disabled={loading}
         className="w-full cursor-pointer rounded-lg bg-blue px-8 py-3.5 text-base font-semibold text-white shadow-sm transition-colors duration-200 hover:bg-blue/90 disabled:cursor-not-allowed disabled:opacity-60"
       >
-        {loading ? "Sending..." : "Send Cancellation Link"}
+        {loading ? "Sending..." : "Resend My Link"}
       </button>
     </form>
   );
